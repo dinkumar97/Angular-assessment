@@ -1,0 +1,37 @@
+<div class="header-bar">
+  <img (click)="redirect('home')"
+    width="40"
+    alt="ShopEase Logo" class="cursor-pointer"
+    src="assets/ShopEase-logo.png"
+  />
+  <span (click)="redirect('home')" class="cursor-pointer">ShopEase</span>
+    <div class="spacer"></div>
+    <div class="menus">
+      <a aria-label="Home" target="_blank" rel="noopener" 
+        (click)="redirect('home')" class="menu-link">
+        Home
+      </a>
+      <a aria-label="Product" target="_blank" rel="noopener" 
+        (click)="redirect('products')" class="menu-link">
+        Product
+      </a>
+      <a aria-label="AboutUs" target="_blank" rel="noopener" class="menu-link">
+        About Us
+      </a>
+      <a aria-label="Contact" target="_blank" rel="noopener" class="menu-link">
+        Contact
+      </a>
+    </div>
+    <div class="mobile-menu">
+      <div class="dropdown">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+        <div class="dropdown-content">
+        <a (click)="redirect('home')" >Home</a>
+        <a (click)="redirect('products')" >Product</a>
+        <a>About Us</a>
+        <a>Contact</a>
+        </div>
+      </div>
+    </div>
+
+</div>

@@ -1,0 +1,38 @@
+<div class="product-search">
+  <div class="category-filter">
+    <h5 for="category"> Category </h5>
+    <select class="product-drop-down" name="categoryType" id="category" 
+            #category (change)="onSelected(category.value)">
+      <option class="product-list" default value="all">All</option>
+      <option class="product-list" value="books">Book</option>
+      <option class="product-list" value="clothing">Clothing</option>
+      <option class="product-list" value="electronics">Electronics</option>
+    </select>
+  </div>
+  <div class="search-bar">
+    <input class="search-input" type="search" (input)="searchTextChanged($event)" placeholder="Search" />
+  </div>
+</div>
+
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let product of displayProductList" 
+                class="col-md-4 product-container">
+                <div class="product-card">
+                  <div class="product-image">
+                    <img width="100%" [src]="product.imagePath" />
+                  </div>
+                  <div>
+                    <h5>{{product.name}}</h5>
+                    <span>{{product.price}}</span>
+                  </div>
+                  <div>
+                    <button type="button" class="btn btn-secondary product-button">
+                        Add to Cart</button>
+                  </div>         
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

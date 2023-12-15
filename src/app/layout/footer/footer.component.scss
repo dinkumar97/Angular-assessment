@@ -1,0 +1,22 @@
+.footer-copyright {
+    background-color: #27527c;
+    color: #fff!important;
+}
+
+.footer-content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+
+    div{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.footer-link {   
+    padding: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+}
